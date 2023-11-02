@@ -4,7 +4,7 @@
   "description": "js pure application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "parcel src/index.html"
   },
   "keywords": [
     "js",

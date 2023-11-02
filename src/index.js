@@ -6,7 +6,7 @@ const model =[
         '32332',
         '543'
     ]},
-    {type: 'image', value: './assets/4-pet.png'}
+    {type: 'image', value: 'src/assets/4-pet.png'}
 ]
 const $site = document.querySelector('#site')
 
