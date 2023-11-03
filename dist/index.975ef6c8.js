@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"beUwC":[function(require,module,exports) {
+})({"icZzK":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "7055c94b59712999";
+module.bundle.HMR_BUNDLE_ID = "890e741a975ef6c8";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -574,8 +574,167 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"4M6V8":[function(require,module,exports) {
+},{}],"8lqZg":[function(require,module,exports) {
+var _model = require("./model");
+var _templates = require("./templates");
+const $site = document.querySelector("#site");
+(0, _model.model).forEach((block)=>{
+    const toHTML = (0, _templates.templates)[block.type];
+    if (toHTML) $site.insertAdjacentHTML("beforeend", toHTML(block));
+});
 
-},{}]},["beUwC","4M6V8"], "4M6V8", "parcelRequireebac")
+},{"./model":"dEDha","./templates":"gOO7a"}],"dEDha":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "model", ()=>model);
+var _4PetPng = require("./assets/4-pet.png");
+var _4PetPngDefault = parcelHelpers.interopDefault(_4PetPng);
+const model = [
+    {
+        type: "title",
+        value: "\u0411\u043E\u043B\u044C \u0438 \u0441\u0442\u0440\u0430\u0434\u0430\u043D\u0438\u044F, \u0437\u0430\u0442\u043E \u0432\u0435\u0441\u0435\u043B\u043E",
+        options: {
+            tag: "h2",
+            styles: {
+                background: "#ff0099",
+                color: "#fff",
+                "text-align": "center",
+                padding: "1.5rem"
+            }
+        }
+    },
+    {
+        type: "text",
+        value: "\u0424\u0430\u0440\u0438\u0442\u043E\u043D \u043B\u044E\u0431\u0438\u043C\u044B\u0439 \u043C\u0430\u043B\u044C\u0447\u0438\u043A"
+    },
+    {
+        type: "colons",
+        value: [
+            "123123",
+            "32332",
+            "543"
+        ]
+    },
+    {
+        type: "image",
+        value: (0, _4PetPngDefault.default)
+    }
+];
 
-//# sourceMappingURL=VsCode-Projects.59712999.js.map
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./assets/4-pet.png":"jZzdA"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"jZzdA":[function(require,module,exports) {
+module.exports = require("63b50dce8ea714db").getBundleURL("bLxZJ") + "4-pet.e5e2167d.png" + "?" + Date.now();
+
+},{"63b50dce8ea714db":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"gOO7a":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "templates", ()=>templates);
+var _utils = require("./utils");
+function title(block) {
+    const { tag = "h1", styles } = block.options;
+    return (0, _utils.row)((0, _utils.col)(`<${tag}>${block.value}</${tag}>`), (0, _utils.css)(styles));
+}
+function text(block) {
+    return (0, _utils.row)((0, _utils.col)(`<p>${block.value}</p>`));
+}
+function colons(block) {
+    const html = block.value.map((item)=>(0, _utils.col)(item));
+    return (0, _utils.row)(html.join(""));
+}
+function image(block) {
+    return (0, _utils.row)(`<img scr="${block.value}"/>`);
+}
+const templates = {
+    title,
+    text,
+    image,
+    colons
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./utils":"en4he"}],"en4he":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "row", ()=>row);
+parcelHelpers.export(exports, "col", ()=>col);
+parcelHelpers.export(exports, "css", ()=>css);
+function row(content, styles = "") {
+    return `<div class="row" style="${styles}">${content}</div>`;
+}
+function col(content) {
+    return `<div class="col-sm">${content}</div>`;
+}
+function css(styles = {}) {
+    const keys = Object.keys(styles);
+    const array = keys.map((key)=>{
+        return `${key}: ${styles[key]}`;
+    });
+    return array.join(";");
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["icZzK","8lqZg"], "8lqZg", "parcelRequireebac")
+
+//# sourceMappingURL=index.975ef6c8.js.map

@@ -4,7 +4,7 @@
   "description": "js pure application",
   "main": "index.js",
   "scripts": {
-    "serve": "parcel src/index.html"
+    "serve": "parcel src/index.html -p 4444 --open"
   },
   "keywords": [
     "js",
