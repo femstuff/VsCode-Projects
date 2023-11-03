@@ -1,7 +1,7 @@
 import image from './assets/4-pet.png'
 
 export const model = [
-    {type: 'title', value: 'Боль и страдания, зато весело', options: {
+    {type: 'title', value: 'Боль и страдания, зато весело!', options: {
         tag: 'h2',
         styles: {
             background: '#ff0099',

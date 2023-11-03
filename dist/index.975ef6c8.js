@@ -592,7 +592,7 @@ var _4PetPngDefault = parcelHelpers.interopDefault(_4PetPng);
 const model = [
     {
         type: "title",
-        value: "\u0411\u043E\u043B\u044C \u0438 \u0441\u0442\u0440\u0430\u0434\u0430\u043D\u0438\u044F, \u0437\u0430\u0442\u043E \u0432\u0435\u0441\u0435\u043B\u043E",
+        value: "\u0411\u043E\u043B\u044C \u0438 \u0441\u0442\u0440\u0430\u0434\u0430\u043D\u0438\u044F, \u0437\u0430\u0442\u043E \u0432\u0435\u0441\u0435\u043B\u043E!",
         options: {
             tag: "h2",
             styles: {
